@@ -1,0 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: saberton <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/19 20:07:38 by saberton          #+#    #+#             */
+/*   Updated: 2024/03/19 20:16:22 by saberton         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include <unistd.h>
+
+int	ft_str_is_numeric(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (!((str[i] > 48 && str[i] < 57)))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+/*int	main(void)
+{
+	char	*str = "2645";
+	char	res;
+
+	res = ft_str_is_numeric(str) + '0';
+	write(1, &res, 1);
+	return (0);
+}*/
