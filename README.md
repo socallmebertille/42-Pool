@@ -38,7 +38,7 @@ The first Shell modules are designed to build confidence with practical commands
 | Notion | Command pattern | Flag / pipeline details | Example | Why it matters |
 |---|---|---|---|---|
 | User groups | `id -Gn "$FT_USER" \| tr " " "," \| tr -d "\n"` | `-G`: print group IDs as names, `-n`: names instead of numeric IDs. `tr " " ","`: replace spaces with commas. `tr -d "\n"`: remove trailing newline. | `FT_USER=bertille ./print_groups.sh` | Useful when grading expects an exact comma-separated line with no newline differences. |
-| Find shell scripts | `find -type f -name "*.sh"` | `-type f`: regular files only. `-name "*.sh"`: glob filter by extension. | `find . -type f -name "*.sh"` | Builds the habit of applying strict filters before running actions. |
+| Find shell scripts | `find -type f -name "*.sh"` | `-type f`: regular files only. `-name "*.sh"`: glob filter by extension `.sh`. | `find . -type f -name "*.sh"` | Builds the habit of applying strict filters before running actions. |
 | Count entries | `find . \| wc -l` | `find .`: outputs one path per line (including `.`). `wc -l`: counts lines. | `find . \| wc -l` | Quick sanity check for directory size and unexpected files. |
 | Extract MAC addresses | `ifconfig \| grep ether \| awk '{print $2}'` | `grep ether`: keep only lines containing MAC data. `awk '{print $2}'`: print the second field. | `./MAC.sh` | Shows how simple Unix tools compose into reliable one-liners. |
 | Latest commit SHAs | `git log --format="%H" -5` | `--format="%H"`: output full commit hashes only. `-5`: limit to the five latest commits. | `./git_commit.sh` | Produces machine-checkable output for commit-history exercises. |
