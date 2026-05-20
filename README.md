@@ -20,10 +20,16 @@
 <h2>Overview</h2>
 
 This repository contains my 42 Pool exercises, organized by Shell days (`Shell_00`, `Shell_01`) and C modules (`C_00` to `C_08`).
+In the full Pool path, modules can go up to `C_13`.
+There are also `Rush_00` to `Rush_02` (usually on Fridays), where you team up with random peers to focus on a weekend project.
 Each `exXX` folder is an independent drill focused on one core concept.
 The goal of these notes is to stay concise but useful: what each block teaches, and what is worth remembering when reviewing.
 
 <h2>Shell notions</h2>
+
+Shell is the language you use to talk to your machine through the terminal.
+At first, the terminal can look intimidating, but it is simply a powerful way to navigate your system and automate useful tasks.
+The first Shell modules are designed to build confidence with practical commands and command combinations.
 
 | Notion | Command pattern | Flag / pipeline details | Example | Why it matters |
 |---|---|---|---|---|
@@ -35,6 +41,10 @@ The goal of these notes is to stay concise but useful: what each block teaches, 
 | Sorted compact listing | `ls -mpt` | `-m`: comma-separated list, `-p`: add `/` to directories, `-t`: sort by modification time. | `./midLS` | Demonstrates how combining flags shapes output format precisely. |
 
 <h2>C notions</h2>
+
+What is important with C is how close it is to the machine.
+You are responsible for memory use yourself: what you allocate, what you write to, and what you must free.
+That is why these modules focus on precision, explicit logic, and careful control of data and pointers.
 
 | Module | Main point | Keys to understand and keep in mind |
 |---|---|---|
